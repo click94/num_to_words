@@ -14,5 +14,7 @@ test(2001);
 test(1999);
 //5 test case: 17999 == seventeen thousand nine hundred and ninety-nine
 test(17999);
-//6. test case: result with invalid input
+//6. test case: 17932499 == seventeen million nine hundred and thirty two thousand four hundred and ninety-nine
+test(17932499); 
+//7. test case: result with invalid input
 test("éfsdÉß$");
