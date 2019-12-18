@@ -1,7 +1,6 @@
 $( document ).ready(function() {
     var numInput = $("#numInput"), 
-        convertToWordsBtn = $("#convertToWordsBtn"),
-        convertError = $("#convertError"),
+        convertToWordsBtn = $("#convertToWordsBtn"),       
         convertResult =  $("#convertResult")
     ;     
     convertToWordsBtn.click(function() {
@@ -15,8 +14,15 @@ $( document ).ready(function() {
     });
 })
 function validateNum(num){
+    var convertError = $("#convertError");
     convertError.text("");
     var isValid = true;
-    //todo: validation
+    if(!num){
+        convertError.text("Please add a number.");
+        isValid = false;
+    }else if(!$.isNumeric(num)){
+        convertError.text("Please add a valid number.");
+        isValid = false;
+    }
     return isValid;
 }
